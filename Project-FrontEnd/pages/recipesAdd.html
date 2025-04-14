@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes Add</title>
+    <link rel="Icon" type="image/png" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/addrecipes.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <div class="header-menu">
+        <img
+          class="logo"
+          src="../assets/images-removebg-preview 1.png"
+          alt=""
+        />
+        <a
+          class="item"
+          href="../pages/home.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/home.png" alt="" />
+          <div>Homepage</div>
+        </a>
+        <a
+          class="item"
+          href="../pages/foods.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/foods.png" alt="" />
+          <div>Foods</div>
+        </a>
+        <a class="item" href="../pages/recipes.html">
+          <img src="../assets/icons/openRecipes.png" alt="" />
+          <div>Recipes</div>
+        </a>
+      </div>
+      <a id="sign-out" class="item sign-out" href="../index.html">
+        <img src="../assets/icons/Overlay.png" alt="" />
+        <div>Sign out</div>
+      </a>
+    </div>
+    <div class="nav" id="nav">
+      <img src="../assets/icons/Icon.png" alt="" id="btn-open-nav" />
+      <img
+        src="../assets/icons/close-menu.png"
+        id="btn-close-nav"
+        class="close-icon"
+        alt=""
+      />
+      <span id="userName" style="color: rgb(82, 81, 81)"></span>
+    </div>
+    <!-- recipes -->
+    <div class="task">
+      <p>Recipes</p>
+      <p>Creat, check and update recipes</p>
+    </div>
+    <div class="content">
+      <div class="head_content">
+        <!-- Left -->
+        <div class="left" id="box-img">
+          <div class="add-img" id="add-img">
+            <img src="../assets/icons/pen-orange.png" alt="" />
+            <p>Upload image</p>
+          </div>
+          <input
+            class="add-input-img"
+            id="input-url"
+            type="text"
+            name=""
+            id=""
+            placeholder="Copy URL for image + enter"
+          />
+          <div class="top">
+            <div class="my_recipes">
+              <img src="../assets/icons/pen.png" alt="icon_fix" />
+              <p>My recipes</p>
+            </div>
+
+            <div class="heart">
+              <img src="../assets/icons/heart.png" alt="heart" />
+              <span>0</span>
+            </div>
+          </div>
+          <div class="bottom" id="add-category">
+            <img src="../assets/icons/Vector.png" alt="new_category" />
+            <p id="selected-category">New category</p>
+            <ul class="dropdown hide" id="category-list">
+              <li>Fruit</li>
+              <li>Vegetarian Dish</li>
+              <li>Meat</li>
+              <li>Main Course</li>
+              <li>Snacks</li>
+              <li>Breakfast</li>
+              <li>Drinks</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="right">
+          <div class="pushlish">
+            <div class="title">
+              <h2>Publish recipe</h2>
+              <p>
+                Publish your recipe on your website or share it with the Nutrium
+                community
+              </p>
+            </div>
+            <button id="publish">Publish</button>
+          </div>
+          <div class="basic">
+            <h2>Basic information</h2>
+            <p>Check and edit recipe's basic information</p>
+            <div class="info-table">
+              <div class="tr">
+                <span>Name</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+              <div class="tr">
+                <span>Description</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+              <div class="tr">
+                <span>Total time</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+              <div class="tr">
+                <span>Preparation time</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+              <div class="tr">
+                <span>Final weight</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+              <div class="tr">
+                <span>Portions</span>
+                <input type="text" class="input-basic-information" />
+                <div class="img">
+                  <img src="../assets/icons/edit.png" alt="edit" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="creation">
+        <span>Creation</span>
+        <p>Create the recipe and choose the ingredients</p>
+      </div>
+      <div class="ingredients">
+        <div class="left_ingredients">
+          <div class="ingredients_list">
+            <span>Ingredients</span>
+            <p>Search and add ingredients to the recipe</p>
+
+            <div class="ingredient-container">
+              <div class="add-ingredient">
+                <img
+                  src="../assets/icons/keyboard_arrow_up.png"
+                  alt="up"
+                  id="btn-ingredient"
+                />
+                <p>Add new ingredient</p>
+              </div>
+              <div
+                id="content-ingredient"
+                class="hide-ingredient content-ingredient"
+              >
+                <div class="search">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search foods..."
+                  />
+                  <select class="sort-select">
+                    <option value="energy">Energy</option>
+                    <option value="fat">Fat</option>
+                    <option value="carbohydrate">Carbohydrate</option>
+                    <option value="protein">Protein</option>
+                  </select>
+                  <select class="category-select">
+                    <option value="">All Sources</option>
+                    <option value="My foods">My foods</option>
+                    <option value="Community Recipes">Community Recipes</option>
+                  </select>
+                </div>
+
+                <div class="nutritional_table">
+                  <div class="table_head">
+                    <span>Nutritional Information</span>
+                    <span>Energy</span>
+                    <span>Fat</span>
+                    <span>Carboh... </span>
+                    <span>Protein</span>
+                    <span> </span>
+                  </div>
+                </div>
+
+                <div class="page-recipes"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cooking_method">
+            <span>Cooking method</span>
+            <p>Give instructions to prepare this recipe</p>
+            <div>
+              <span>1</span>
+              <input type="text" placeholder="Add new cooking method" />
+              <div class="img_cooking">
+                <img src="../assets/icons/edit.png" alt="edit" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_ingredients">
+          <div class="analysis">
+            <div class="svg-box">
+              <img src="../assets/icons/message.png" alt="" />
+            </div>
+            <span>Global analysis per portion</span>
+            <p>Energy, macronutrients and fiber distribution</p>
+            <div class="energy">
+              <span>Energy</span>
+              <p><span id="energy-chart">0</span> kcal</p>
+            </div>
+            <div class="chart">
+              <div class="nutrition">
+                <span class="fat">0g</span>
+                <p>Fat</p>
+              </div>
+              <div class="nutrition">
+                <span class="carbohydrate">0g</span>
+                <p>Carbohydrate</p>
+              </div>
+              <div class="nutrition">
+                <span class="protein">0g</span>
+                <p>Protein</p>
+              </div>
+              <div class="nutrition">
+                <span class="fiber">0g</span>
+                <p>Fiber</p>
+              </div>
+            </div>
+          </div>
+          <div class="macronutrients">
+            <h2>Macronutrients per portion</h2>
+            <p>Macronutrients distribution of the recipe</p>
+            <div class="chart-container">
+              <div class="pie-chart">
+                <div class="label fat-label"></div>
+                <div class="label carb-label"></div>
+                <div class="label protein-label"></div>
+              </div>
+            </div>
+            <div class="legend">
+              <div><span style="background-color: #e64a64"></span> Fat</div>
+              <div>
+                <span style="background-color: #e8a878"></span> Carbohydrate
+              </div>
+              <div><span style="background-color: #17a589"></span> Protein</div>
+            </div>
+          </div>
+          <div class="table-container">
+            <h2>Micronutrients per portion</h2>
+            <p>Micronutrients distribution of the recipe</p>
+            <table class="nutrition-table">
+              <tr class="sodium">
+                <td>Sodium</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="vitaminA">
+                <td>Vitamin A</td>
+                <td><span>4</span> ug</td>
+              </tr>
+              <tr class="vitaminB6">
+                <td>Vitamin B-6</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="vitaminB12">
+                <td>Vitamin B-12</td>
+                <td><span>0</span> ug</td>
+              </tr>
+              <tr class="vitaminC">
+                <td>Vitamin C</td>
+                <td><span>14</span> mg</td>
+              </tr>
+              <tr class="vitaminD">
+                <td>Vitamin D (D2 + D3)</td>
+                <td><span>0</span> ug</td>
+              </tr>
+              <tr class="vitaminE">
+                <td>Vitamin E</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="vitaminK">
+                <td>Vitamin K</td>
+                <td><span>1</span> ug</td>
+              </tr>
+              <tr class="sugars">
+                <td>Sugars</td>
+                <td><span>9</span> g</td>
+              </tr>
+              <tr class="calcium">
+                <td>Calcium</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="iron">
+                <td>Iron</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="magnesium">
+                <td>Magnesium</td>
+                <td><span>4</span> mg</td>
+              </tr>
+              <tr class="phosphorus">
+                <td>Phosphorus</td>
+                <td><span>10</span> mg</td>
+              </tr>
+              <tr class="potassium">
+                <td>Potassium</td>
+                <td><span>124</span> mg</td>
+              </tr>
+              <tr class="zinc">
+                <td>Zinc</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="copper">
+                <td>Copper</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="fluoride">
+                <td>Fluoride</td>
+                <td><span>49</span> ug</td>
+              </tr>
+              <tr class="manganese">
+                <td>Manganese</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="selenium">
+                <td>Selenium</td>
+                <td><span>0</span> ug</td>
+              </tr>
+              <tr class="thiamin">
+                <td>Thiamin</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="riboflavin">
+                <td>Riboflavin</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="niacin">
+                <td>Niacin</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="pantothenicAcid">
+                <td>Pantothenic acid</td>
+                <td><span>0</span> mg</td>
+              </tr>
+              <tr class="folateTotal">
+                <td>Folate, total</td>
+                <td><span>2</span> ug</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/addrecipes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/proteced.js"></script>
+  </body>
+</html>

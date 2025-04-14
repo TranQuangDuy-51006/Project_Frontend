@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: rgb(27, 27, 27);
+}
+
+.hide {
+  display: none;
+}
+
+.m-top {
+  margin-top: 10px;
+}
+
+/* login */
+
+.login-center {
+  background-color: rgb(248, 249, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.check {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 320px;
+}
+
+.error {
+  display: none;
+  background-color: #ffe5e8;
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.error-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.error-head h4 {
+  font-size: 20px;
+}
+.error p {
+  margin: 0 25px;
+}
+
+.left .minus {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+
+.error .left {
+  display: flex;
+  gap: 8px;
+}
+
+.error-head .close {
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.login-success {
+  display: none;
+  background-color: #e5fff0;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.login-success .icon-check {
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02ee6a;
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+.login-success p {
+  margin-left: 8px;
+  line-height: 30px;
+}
+
+.container-login {
+  width: 300px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-login img {
+  margin: auto;
+}
+
+.container-login h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.input-box {
+  border: 1px solid gray;
+  border-radius: 10px;
+  border-bottom: none;
+}
+
+.input-box input:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.input-box input:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input-box input {
+  padding: 15px 25px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.remember {
+  margin: 16px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  margin: 16px 0;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 5px;
+}
+
+.container-login a {
+  color: #0d6efd;
+}

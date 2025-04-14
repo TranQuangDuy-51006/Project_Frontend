@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="Icon" type="image/png" href="../assets/logo.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="login-center">
+      <div class="check" id="check">
+        <div class="error" id="error">
+          <div class="error-head">
+            <div class="left">
+              <i class="minus fa-solid fa-minus"></i>
+              <h4>Error</h4>
+            </div>
+            <i class="fa-solid fa-xmark close" id="error-btn-close"></i>
+          </div>
+        </div>
+        <div class="login-success">
+          <i class="fa-solid fa-check icon-check"></i>
+          <p>Đăng nhập thành công</p>
+        </div>
+      </div>
+      <div class="container-login">
+        <img src="./assets/images-removebg-preview 1.png" alt="" />
+        <h3>Please sign in</h3>
+        <form action="">
+          <div class="input-box">
+            <input type="text" placeholder="Email address" id="login-email" />
+            <br />
+            <input type="password" placeholder="Password" id="login-password" />
+          </div>
+          <div class="remember">
+            <input type="checkbox" id="remember" />
+            <label for="">Remember me</label>
+          </div>
+          <p>
+            Don't have an account, <a href="./register.html">click here !</a>
+          </p>
+          <button class="sign-in-btn">Sign in</button>
+        </form>
+        <p>&copy; 2025 - Rikkei Education</p>
+      </div>
+    </div>
+    <script src="./js/log.js"></script>
+  </body>
+</html>

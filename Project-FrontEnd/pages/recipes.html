@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="Icon" type="image/png" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/recipes.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <div class="header-menu">
+        <img
+          class="logo"
+          src="../assets/images-removebg-preview 1.png"
+          alt=""
+        />
+        <a
+          class="item"
+          href="../pages/home.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/home.png" alt="" />
+          <div>Homepage</div>
+        </a>
+        <a
+          class="item"
+          href="../pages/foods.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/foods.png" alt="" />
+          <div>Foods</div>
+        </a>
+        <a class="item" href="../pages/recipes.html">
+          <img src="../assets/icons/openRecipes.png" alt="" />
+          <div>Recipes</div>
+        </a>
+      </div>
+      <a id="sign-out" class="item sign-out" href="../index.html">
+        <img src="../assets/icons/Overlay.png" alt="" />
+        <div>Sign out</div>
+      </a>
+    </div>
+    <div class="nav" id="nav">
+      <img src="../assets/icons/Icon.png" alt="" id="btn-open-nav" />
+      <img
+        src="../assets/icons/close-menu.png"
+        id="btn-close-nav"
+        class="close-icon"
+        alt=""
+      />
+      <span id="userName" style="color: rgb(82, 81, 81)"></span>
+    </div>
+    <div class="home-container">
+      <div class="home-header">
+        <h1>Recipes</h1>
+        <p>Create, check and update recipes</p>
+      </div>
+      <div class="content">
+        <div class="content-header">
+          <div class="box-title">
+            <h1>Recipes</h1>
+            <img
+              src="../assets/icons/plus.png"
+              class="add-icon-recipes"
+              id="btn-add-recipes"
+            />
+          </div>
+          <p>Search, check and update recipes</p>
+        </div>
+        <div class="search-box">
+          <input type="search" placeholder="Search food" class="search-input" />
+          <div class="sort">
+            <img
+              src="../assets/icons/sort1.png"
+              alt="Sort icon"
+              class="sort-toggle"
+            />
+            <div class="sort-display">
+              <p class="selected-option">Sort by nutrient</p>
+              <ul class="sort-options hidden">
+                <li data-sort="energy">Energy</li>
+                <li data-sort="carbohydrate">Carbohydrate</li>
+                <li data-sort="fat">Fat</li>
+                <li data-sort="protein">Protein</li>
+              </ul>
+            </div>
+          </div>
+          <div class="category-dropdown">
+            <div class="category-display">
+              <p class="selected-category">Category</p>
+              <ul class="category-options hidden">
+                <li data-category="fruit">Fruit</li>
+                <li data-category="vegetarian dish">Vegetarian Dish</li>
+                <li data-category="meat">Meat</li>
+                <li data-category="main course">Main Course</li>
+                <li data-category="snacks">Snacks</li>
+                <li data-category="reakfast">Breakfast</li>
+                <li data-category="drinks">Drinks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="note-box">
+          <div>
+            <img src="../assets/icons/heart-like.png" alt="" />
+            <p>Favorites<span class="count-like">0</span></p>
+          </div>
+          <div>
+            <img src="../assets/icons/check-icon.png" alt="" />
+            <img src="../assets/icons/pen.png" alt="" />
+            <p>My recipes</p>
+          </div>
+        </div>
+        <div class="recipe-information" id="recipe-information"></div>
+        <div class="page-recipes" id="pagination"></div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/recipes.js"></script>
+    <script src="/js/proteced.js"></script>
+  </body>
+</html>

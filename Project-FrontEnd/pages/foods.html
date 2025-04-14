@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foods</title>
+    <link rel="Icon" type="image/png" href="../assets/logo.png" />
+    <link rel="stylesheet" href="../css/foods.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <div class="header-menu">
+        <img
+          class="logo"
+          src="../assets/images-removebg-preview 1.png"
+          alt=""
+        />
+        <a
+          class="item"
+          href="../pages/home.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/home.png" alt="" />
+          <div>Homepage</div>
+        </a>
+        <a class="item" href="../pages/foods.html">
+          <img src="../assets/icons/openFoods.png" alt="" />
+          <div>Foods</div>
+        </a>
+        <a
+          class="item"
+          href="../pages/recipes.html"
+          style="background-color: rgb(71, 75, 82)"
+        >
+          <img src="../assets/icons/recipes.png" alt="" />
+          <div>Recipes</div>
+        </a>
+      </div>
+      <a id="sign-out" class="item sign-out" href="../index.html">
+        <img src="../assets/icons/Overlay.png" alt="" />
+        <div>Sign out</div>
+      </a>
+    </div>
+    <div class="nav" id="nav">
+      <img src="../assets/icons/Icon.png" alt="" id="btn-open-nav" />
+      <img
+        src="../assets/icons/close-menu.png"
+        id="btn-close-nav"
+        class="close-icon"
+        alt=""
+      />
+      <span id="userName" style="color: rgb(82, 81, 81)"></span>
+    </div>
+    <!-- foods code -->
+    <div class="food-container">
+      <div class="food-header">
+        <h1>Food databases</h1>
+        <p>Create, check and update foods that you can use on meal plans</p>
+      </div>
+      <div class="content">
+        <div class="content-header">
+          <h1>Foods</h1>
+          <p>Search, consult and add new foods to the system</p>
+        </div>
+        <div class="search-box">
+          <input type="search" placeholder="Search food" class="search-input" />
+          <div class="sort">
+            <img
+              src="../assets/icons/sort1.png"
+              alt="Sort icon"
+              class="sort-toggle"
+            />
+            <div class="sort-display">
+              <p class="selected-option">Sort by nutrient</p>
+              <ul class="sort-options hidden">
+                <li data-sort="energy">Energy</li>
+                <li data-sort="carbohydrate">Carbohydrate</li>
+                <li data-sort="fat">Fat</li>
+                <li data-sort="protein">Protein</li>
+              </ul>
+            </div>
+          </div>
+          <div class="category-dropdown">
+            <div class="category-display">
+              <p class="selected-category">Category</p>
+              <ul class="category-options hidden">
+                <li data-category="fruit">Fruit</li>
+                <li data-category="vegetable">Vegetable</li>
+                <li data-category="meat">Meat</li>
+                <li data-category="grain">Grain</li>
+                <li data-category="dairy">Dairy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-information"></div>
+        <div class="box-food">
+          <!-- S -->
+          <!-- E -->
+          <div class="create-food" id="create-food">
+            <img src="../assets/icons/create-food.png" alt="" />
+            <span>Create food</span>
+          </div>
+        </div>
+        <div class="page-recipes"></div>
+      </div>
+    </div>
+    <!-- add------------------------------------------------------------------- -->
+    <div class="add-container" id="add-container">
+      <img
+        src="../assets/icons/add-close.png"
+        class="icon-close-add-food"
+        id="close-food-add"
+        alt=""
+      />
+      <h2>Add new food</h2>
+      <p>Fill in the fields below with the food information</p>
+      <div class="content-add-food">
+        <div class="row">
+          <div class="left-input">
+            <p>Name</p>
+            <input type="text" />
+          </div>
+          <div class="right-input">
+            <p>Source</p>
+            <p class="source-food">My foods</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left-input">
+            <p>Category</p>
+            <input type="text" />
+          </div>
+          <div class="right-input">
+            <p>Quantity</p>
+            <input type="text" />
+            <div>grams</div>
+          </div>
+        </div>
+      </div>
+      <p class="nutritional">Nutritional value per 100 g</p>
+      <div class="title-ingredient">Macronutrients</div>
+      <div class="ingredient-header macro">
+        <div class="ingredient">
+          <p>Energy</p>
+          <input type="text" />
+          <div>kcal</div>
+        </div>
+        <div class="ingredient">
+          <p>Fat</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="ingredient">
+          <p>Carbohydrate</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="ingredient">
+          <p>Protein</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+      </div>
+      <div class="title-ingredient">Micronutrients</div>
+      <div class="ingredient-micronutrients">
+        <div class="micronutrients">
+          <p>Cholesterol</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Fiber</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="micronutrients">
+          <p>Sodium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Water</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin A</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin B6</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin B12</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin C</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin D (D2 + D3)</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin E</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Vitamin K</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Starch</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Lactose</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Alcohol</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Caffeine</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Sugars</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Calcium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Iron</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Magnesium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Phosphorus</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Potassium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Zinc</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Copper</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fluoride</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Manganese</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Selenium</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Thiamin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Riboflavin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Niacin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Pantothenic acid</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Folate, total</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Folic acid</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total trans</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total saturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total monounsaturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total polyunsaturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Chloride</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+      </div>
+      <div class="box-btn-add">
+        <button class="cancel" id="cancel-food-add">Cancel</button>
+        <button class="save">Save and close</button>
+      </div>
+    </div>
+    <!-- fix---------------------------------------------------------------------- -->
+    <div class="fix-container" id="fix-container">
+      <img
+        src="../assets/icons/add-close.png"
+        class="icon-close-fix-food"
+        id="close-food-fix"
+        alt=""
+      />
+      <h2>Food information</h2>
+      <p>Check and update the information about the food</p>
+      <div class="content-fix-food">
+        <div class="row">
+          <div class="left-input">
+            <p>Name</p>
+            <input type="text" />
+          </div>
+          <div class="right-input">
+            <p>Source</p>
+            <p class="source-food">My foods</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left-input">
+            <p>Category</p>
+            <input type="text" />
+          </div>
+          <div class="right-input">
+            <p>Quantity</p>
+            <input type="text" />
+            <div>grams</div>
+          </div>
+        </div>
+      </div>
+      <p class="nutritional">Nutritional value per 100 g</p>
+      <div class="title-ingredient">Macronutrients</div>
+      <div class="ingredient-header">
+        <div class="ingredient">
+          <p>Energy</p>
+          <input type="text" />
+          <div>kcal</div>
+        </div>
+        <div class="ingredient">
+          <p>Fat</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="ingredient">
+          <p>Carbohydrate</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="ingredient">
+          <p>Protein</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+      </div>
+      <div class="title-ingredient">Micronutrients</div>
+      <div class="ingredient-micronutrients">
+        <div class="micronutrients">
+          <p>Cholesterol</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Fiber</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="micronutrients">
+          <p>Sodium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Water</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin A</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin B6</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin B12</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin C</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin D (D2 + D3)</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+        <div class="micronutrients">
+          <p>Vitamin E</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Vitamin K</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Starch</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Lactose</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Alcohol</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Caffeine</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Sugars</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Calcium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Iron</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Magnesium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Phosphorus</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Potassium</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Zinc</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Copper</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fluoride</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Manganese</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Selenium</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Thiamin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Riboflavin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Niacin</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Pantothenic acid</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Folate, total</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Folic acid</p>
+          <input type="text" />
+          <div>ug</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total trans</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total saturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total monounsaturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Fatty acids, total polyunsaturated</p>
+          <input type="text" />
+          <div>g</div>
+        </div>
+
+        <div class="micronutrients">
+          <p>Chloride</p>
+          <input type="text" />
+          <div>mg</div>
+        </div>
+      </div>
+      <div class="box-btn-fix">
+        <button class="cancel" id="cancel-food-fix">Cancel</button>
+        <button class="save save-fix">Save and close</button>
+      </div>
+    </div>
+
+    <div class="coat-add-food" id="coat"></div>
+    <script src="../js/main.js"></script>
+    <script src="../js/food.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/proteced.js"></script>
+  </body>
+</html>
