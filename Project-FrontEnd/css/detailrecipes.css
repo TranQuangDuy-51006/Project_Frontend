@@ -530,3 +530,15 @@ td:nth-child(2) {
 table td:nth-child(2) span {
   font-size: 13px;
 }
+
+
+.avt-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avt-box .avt {
+  background-color: transparent;
+  width: 50px;
+}

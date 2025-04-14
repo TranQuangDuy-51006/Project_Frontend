@@ -64,7 +64,6 @@ function renderPagination() {
 
   pagination.innerHTML = "";
 
-  // Prev
   pagination.insertAdjacentHTML(
     "beforeend",
     `<img class="page-child prev-page" src="../assets/icons/arrow_left.png" alt="Prev" 
@@ -83,7 +82,6 @@ function renderPagination() {
     );
   }
 
-  // Next
   pagination.insertAdjacentHTML(
     "beforeend",
     `<img class="page-child next-page" src="../assets/icons/arrow_right.png" alt="Next"
@@ -94,7 +92,6 @@ function renderPagination() {
       } />`
   );
 
-  // Gán sự kiện
   pagination.querySelector(".prev-page")?.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
@@ -134,7 +131,7 @@ sortOptions.querySelectorAll("li").forEach((li) => {
     sortOptions.classList.add("hidden");
     const sortValue = li.dataset.sort;
     console.log("Đang sắp xếp theo:", sortValue);
-    // TODO: Gọi hàm sắp xếp danh sách ở đây nếu cần
+    
   });
 });
 
@@ -159,7 +156,6 @@ categoryOptions.querySelectorAll("li").forEach((li) => {
     categoryOptions.classList.remove("hidden");
     const categoryValue = li.dataset.category;
     console.log("Selected category:", categoryValue);
-    // TODO: lọc danh sách theo categoryValue nếu cần
   });
 });
 
@@ -190,7 +186,7 @@ function filterAndSortRecipes() {
     })
     .sort((a, b) => {
       if (currentSort) {
-        return b[currentSort] - a[currentSort]; // Descending
+        return b[currentSort] - a[currentSort]; 
       }
       return 0;
     });
