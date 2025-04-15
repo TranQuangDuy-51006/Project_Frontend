@@ -63,7 +63,7 @@ function renderPagination() {
 
   paginationContainer.innerHTML = "";
 
-  // Prev
+  
   paginationContainer.insertAdjacentHTML(
     "beforeend",
     `<img class="page-child prev-page page-img-button" src="../assets/icons/arrow_left.png" alt="Prev"
@@ -72,7 +72,7 @@ function renderPagination() {
         } />`
   );
 
-  // Page numbers
+
   for (let i = 1; i <= totalPages; i++) {
     paginationContainer.insertAdjacentHTML(
       "beforeend",
@@ -82,7 +82,6 @@ function renderPagination() {
     );
   }
 
-  // Next
   paginationContainer.insertAdjacentHTML(
     "beforeend",
     `<img class="page-child next-page page-img-button" src="../assets/icons/arrow_right.png" alt="Next"
@@ -93,7 +92,6 @@ function renderPagination() {
         } />`
   );
 
-  // Add event listeners to pagination buttons
   paginationContainer
     .querySelector(".prev-page")
     ?.addEventListener("click", () => {

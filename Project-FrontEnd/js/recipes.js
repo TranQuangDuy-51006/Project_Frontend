@@ -142,7 +142,6 @@ sortOptions.querySelectorAll("li").forEach((li) => {
     sortOptions.classList.add("hidden");
     const sortValue = li.dataset.sort;
     console.log("Đang sắp xếp theo:", sortValue);
-    // TODO: Gọi hàm sắp xếp danh sách ở đây nếu cần
   });
 });
 
@@ -152,7 +151,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// CATEGORY
 const categoryDisplay = document.querySelector(".category-display");
 const categoryOptions = document.querySelector(".category-options");
 const selectedCategory = document.querySelector(".selected-category");
@@ -167,7 +165,6 @@ categoryOptions.querySelectorAll("li").forEach((li) => {
     categoryOptions.classList.remove("hidden");
     const categoryValue = li.dataset.category;
     console.log("Selected category:", categoryValue);
-    // TODO: lọc danh sách theo categoryValue nếu cần
   });
 });
 
@@ -198,7 +195,7 @@ function filterAndSortRecipes() {
     })
     .sort((a, b) => {
       if (currentSort) {
-        return b[currentSort] - a[currentSort]; // Descending
+        return b[currentSort] - a[currentSort];
       }
       return 0;
     });
@@ -233,7 +230,6 @@ categoryOptions.querySelectorAll("li").forEach((li) => {
   });
 });
 
-// code recipes khác home
 
 function goDetail() {
   document.querySelectorAll(".community").forEach((child) => {
